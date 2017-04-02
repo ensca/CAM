@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/cheminLayout">
+
+        <TextView
+            style="@style/cheminStyle"
+            android:text="Accueil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminAccueil" />
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Mon espace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminMonEspace" />
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Mon ... vols"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminCarnetDeVol" />
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Vols par aéronef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminListeParAeronef" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titreLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:text="Liste de mes vols par aéronef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCarnetDeVol"
+            style="@style/titleStyle"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerAeronef"
+            android:layout_gravity="center_vertical">
+        </Spinner>
+        <Button
+            android:id="@+id/btnAfficher"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Afficher"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/existVol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/information"/>
+
+    <ListView
+        android:id="@+id/listeVols"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scrollbars="vertical">
+    </ListView>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/plus"
+        android:id="@+id/btnAjouterVol"
+        android:layout_marginStart="285dp"/>
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            style="@style/cheminStyle"
+            android:text="Accueil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminAccueil"/>
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Mon espace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminMonEspace"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+        android:text="Mon espace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMonEspace"
+        style="@style/titleStyle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_below="@id/linearLayout2"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="125dp">
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:text="Mes aéronefs"
+            android:id="@+id/btnMesAeronefs"/>
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:text="mon carnet de vol"
+            android:id="@+id/btnMonCarnetVol"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_below="@id/linearLayout3"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="125dp">
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:text="Mon carnet d'adresses"
+            android:id="@+id/btnMonCarnetAdresses"/>
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:text="mon agenda du club"
+            android:id="@+id/btnMonAgenda"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@id/linearLayout4"
+        android:layout_marginTop="50dp"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:text="Retourner à l'accueil"
+        android:id="@+id/btnRetourAccueil"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

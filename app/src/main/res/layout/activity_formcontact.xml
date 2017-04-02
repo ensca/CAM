@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutChemin">
+
+        <TextView
+            style="@style/cheminStyle"
+            android:text="Accueil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminAccueil"/>
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Le club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminLeClub"/>
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Nous contacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminContact"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/titleStyle"
+        android:text="Nous contacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleContact"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/layoutChemin"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Remplissez ce formulaire pour contacter le webmaster, qui est membre du bureau du club."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/summary"
+        android:textSize="13sp"
+        android:layout_marginTop="13dp"
+        android:textAlignment="center"
+        android:layout_below="@id/titleContact"/>
+
+    <ScrollView
+        android:layout_marginStart="30dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_below="@id/summary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:id="@+id/layoutChamps"
+            android:layout_height="500dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:text="Votre email :"
+                android:textStyle="bold"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Votre email"
+                android:textSize="13dp"
+                android:textColorHint="@color/txtColorChamps"
+                android:layout_below="@+id/txtEmail"
+                android:layout_alignEnd="@+id/titleContact"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                android:id="@+id/txtTel"
+                android:text="Votre numéro de téléphone :"
+                android:textStyle="bold"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/editTel"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Votre numéro de téléphone"
+                android:textSize="13dp"
+                android:textColorHint="@color/txtColorChamps"
+                android:layout_below="@+id/txtTel"
+                android:layout_alignEnd="@+id/titleContact"
+                android:inputType="phone"/>
+
+            <TextView
+                android:id="@+id/txtSujet"
+                android:text="Sujet de votre message :"
+                android:textStyle="bold"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/editSujet"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Sujet de votre message"
+                android:textSize="13dp"
+                android:textColorHint="@color/txtColorChamps"
+                android:layout_below="@+id/txtTel"
+                android:layout_alignEnd="@+id/titleContact" />
+
+            <TextView
+                android:id="@+id/txtMsg"
+                android:text="Votre message :"
+                android:textStyle="bold"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/editMsg"
+                android:layout_width="250dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="top"
+                android:hint="Tapez votre message ici ..."
+                android:textSize="13dp"
+                android:textColorHint="@color/txtColorChamps"
+                android:layout_below="@+id/txtTel"
+                android:layout_alignEnd="@+id/titleContact" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <Button
+                android:id="@+id/btnRetour"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Retour"
+                style="@style/btnStyle"
+                android:layout_marginStart="30dp"/>
+            <Button
+                android:id="@+id/btnEnvoyer"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Envoyer"
+                style="@style/btnStyle"
+                android:layout_marginStart="40dp"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
