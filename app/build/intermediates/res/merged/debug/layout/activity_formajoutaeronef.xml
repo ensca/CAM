@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/layoutChemin">
+        <TextView
+            style="@style/cheminStyle"
+            android:text="Accueil"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/cheminAccueil" />
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Mon espace"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/cheminMonEspace" />
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Mes aéronefs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminMesAeronefs" />
+        <TextView
+            style="@style/cheminStyle"
+            android:text=">Ajouter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheminAjoutAeronef" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:text="Ajouter un aéronef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAjoutAeronef"
+            style="@style/titleStyle" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_below="@id/linearLayout2"
+        android:layout_marginTop="20dp"
+        android:id="@+id/scrollView">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearLayout2"
+        android:id="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/txtNom"
+            android:text="Nom : "
+            android:textColor="@color/textColorTertiary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/editNom"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:hint="ex : CopterX" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/txtType"
+            android:text="Type d'aéronef : "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColorTertiary"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerType"
+            android:textColor="@color/textColorTertiary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/txtAcquisition"
+            android:text="Date d'acquisition : "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColorTertiary"/>
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editAcquisition" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/txtEnvergure"
+            android:text="Envergure (en cm) : "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColorTertiary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editEnvergure"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:hint="ex : 120" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/txtPoids"
+            android:text="Poids (en grammes) : "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColorTertiary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:id="@+id/editPoids"
+            android:hint="ex: 900"
+            android:textSize="14sp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/txtRemarques"
+            android:text="Remarques : "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColorTertiary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/editRemarques"
+            android:hint="Mes remarques ..."
+            android:textSize="14sp"
+            android:gravity="top"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/scrollView">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btnVoirAeronefs"
+            android:text="Voir la liste de mes aéronefs"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnAjouter"
+            android:text="Ajouter"
+            android:textAllCaps="false"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
